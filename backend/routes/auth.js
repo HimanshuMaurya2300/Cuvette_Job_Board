@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const Company = require('../models/Company');
 const router = express.Router();
 const otpGenerator = require('otp-generator');
-const sendMobileOtp = require('../utils/SendMobileOtp');
+const sendMobileOtp = require('../utils/SendMobileOTP');
 const auth = require('../middleware/auth');
 
 // Registration Route
