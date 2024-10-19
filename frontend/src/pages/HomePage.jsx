@@ -68,7 +68,7 @@ const HomePage = () => {
                     <header className="flex items-center">
                         <div className="flex w-full justify-between gap-5">
                             <img
-                                src={`${BASE_URL}/public/logo.svg`}
+                                src={`${BASE_URL}/logo.svg`}
                                 alt="logo"
                                 className="h-[43px] w-[165px]"
                             />
