@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import DatePicker from "../components/DatePicker"
 
 const API_URL = import.meta.env.VITE_API_URL
+const BASE_URL = import.meta.env.VITE_FRONTEND_URL
 
 const InterviewForm = () => {
 
@@ -98,7 +99,7 @@ const InterviewForm = () => {
                     <header className="flex items-center">
                         <div className="flex w-full justify-between gap-5">
                             <img
-                                src="../../public/logo.svg"
+                                src={`${BASE_URL}/public/logo.svg`}
                                 alt="logo"
                                 className="h-[43px] w-[165px]"
                             />
@@ -153,7 +154,7 @@ const InterviewForm = () => {
                 <div className="flex gap-98 sm:flex-col">
                     <div className="border-r border-blue_gray-100 px-5 h-screen py-[43px]">
                         <img
-                            src="../../public/homeIcon.svg"
+                            src={`${BASE_URL}/public/homeIcon.svg`}
                             alt="home-icon"
                             className="h-[42px] w-[42px] object-cover sm:w-full"
                             onClick={() => navigate("/")}
@@ -216,7 +217,7 @@ const InterviewForm = () => {
                                         </p> */}
 
                                         <img
-                                            src='../../public/selectIcon.svg'
+                                            src={`${BASE_URL}/public/selectIcon.svg`}
                                             alt='select_icon'
                                             className="mb-1 h-[26px] w-[26px] rounded"
                                         />
@@ -229,16 +230,6 @@ const InterviewForm = () => {
                                     </p>
 
                                     <div className="flex w-[60%] self-center py-[24px] rounded-[10px] border border-solid border-blue_gray-100_01 px-6 md:w-full sm:p-4 flex-col">
-                                        {/* <div className="flex w-[50%] items-center rounded-[22px] border border-solid border-blue_gray-100_01 p-1.5">
-                                            <div className="h-[26px] w-[26px] rounded-full bg-gray-300" />
-                                            <p className="ml-1.5 text-[20px] font-normal text-blue_gray-700_b2 lg:text-[17px]">
-                                                xyz@gmail.com
-                                            </p>
-                                            <img src="../../public/closeIcon.svg" alt="close_icon"
-                                                className="ml-3 h-[10px] w-[10px]"
-                                            />
-                                        </div> */}
-
                                         <div className="flex items-center space-x-2">
                                             <input
                                                 type="email"
@@ -263,7 +254,9 @@ const InterviewForm = () => {
                                                         onClick={() => handleRemoveCandidate(candidate)}
                                                         className="ml-2 text-gray-500 hover:text-gray-700 focus:outline-none"
                                                     >
-                                                        <img src="../../public/closeIcon.svg" alt="close_icon"
+                                                        <img
+                                                            src={`${BASE_URL}/public/closeIcon.svg`}
+                                                            alt="close_icon"
                                                             className="ml-3 h-[10px] w-[10px]"
                                                         />
                                                     </button>
@@ -286,7 +279,7 @@ const InterviewForm = () => {
                                         className='flex w-[60%] gap-[34px] self-center rounded-[10px] border border-solid border-blue_gray-100_01 bg-transparent px-[30px] py-4 text-[24px] text-blue_gray-700_b2 md:w-full sm:px-4'
                                     />
                                     <img
-                                        src='../../public/calendarIcon.svg'
+                                        src={`${BASE_URL}/public/calendarIcon.svg`}
                                         alt='calendar icon'
                                         className='w-5 h-5 cursor-pointer absolute right-5 top-[50%] translate-y-[-50%]'
                                     />

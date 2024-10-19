@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import InterviewCard from "../components/InterviewCard"
 
 const API_URL = import.meta.env.VITE_API_URL
+const BASE_URL = import.meta.env.VITE_FRONTEND_URL
 
 const HomePage = () => {
 
@@ -67,7 +68,7 @@ const HomePage = () => {
                     <header className="flex items-center">
                         <div className="flex w-full justify-between gap-5">
                             <img
-                                src="../../public/logo.svg"
+                                src={`${BASE_URL}/public/logo.svg`}
                                 alt="logo"
                                 className="h-[43px] w-[165px]"
                             />
@@ -122,7 +123,7 @@ const HomePage = () => {
                 <div className="flex gap-98 sm:flex-col">
                     <div className="border-r border-blue_gray-100 px-5 h-screen py-[43px]">
                         <img
-                            src="../../public/homeIcon.svg"
+                            src={`${BASE_URL}/public/homeIcon.svg`}
                             alt="home-icon"
                             className="h-[42px] w-[42px] object-cover sm:w-full"
                             onClick={() => navigate("/")}
