@@ -2,7 +2,7 @@ import { useState } from "react"
 import Header from "../components/Header"
 import { useNavigate } from "react-router-dom"
 
-const BASE_URL = import.meta.env.VITE_BASE_URL
+const API_URL = import.meta.env.VITE_API_URL
 
 const SignupPage = () => {
 
@@ -18,7 +18,7 @@ const SignupPage = () => {
 
         e.preventDefault()
 
-        const response = await fetch(`${BASE_URL}/api/auth/register`, {
+        const response = await fetch(`${API_URL}/api/auth/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

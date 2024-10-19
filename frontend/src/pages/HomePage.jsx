@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import InterviewCard from "../components/InterviewCard"
 
-const BASE_URL = import.meta.env.VITE_BASE_URL
+const API_URL = import.meta.env.VITE_API_URL
 
 const HomePage = () => {
 
@@ -22,7 +22,7 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchInterviews = async () => {
-            const response = await fetch(`${BASE_URL}/api/interview`, {
+            const response = await fetch(`${API_URL}/api/interview`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchUser = async () => {
-            const response = await fetch(`${BASE_URL}/api/company/checkVerification`, {
+            const response = await fetch(`${API_URL}/api/company/checkVerification`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

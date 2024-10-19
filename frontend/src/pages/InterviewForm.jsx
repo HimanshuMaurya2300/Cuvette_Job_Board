@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import DatePicker from "../components/DatePicker"
 
-const BASE_URL = import.meta.env.VITE_BASE_URL
+const API_URL = import.meta.env.VITE_API_URL
 
 const InterviewForm = () => {
 
@@ -40,7 +40,7 @@ const InterviewForm = () => {
 
         const token = localStorage.getItem("token")
 
-        const response = await fetch(`${BASE_URL}/api/interview`, {
+        const response = await fetch(`${API_URL}/api/interview`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -71,7 +71,7 @@ const InterviewForm = () => {
 
         const checkVerification = async () => {
             const token = localStorage.getItem("token")
-            const response = await fetch(`${BASE_URL}/api/company/checkVerification`, {
+            const response = await fetch(`${API_URL}/api/company/checkVerification`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${token}`,

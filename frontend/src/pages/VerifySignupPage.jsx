@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Header from "../components/Header"
 import { useLocation, useNavigate } from "react-router-dom"
 
-const BASE_URL = import.meta.env.VITE_BASE_URL
+const API_URL = import.meta.env.VITE_API_URL
 
 const VerifySignupPage = () => {
 
@@ -19,7 +19,7 @@ const VerifySignupPage = () => {
 
     useEffect(() => {
         const fetchCompany = async () => {
-            const company = await fetch(`${BASE_URL}/api/company/${companyEmail}`)
+            const company = await fetch(`${API_URL}/api/company/${companyEmail}`)
             const data = await company.json()
             setCompany(data)
             setIsEmailVerified(data?.isEmailVerified)
@@ -40,7 +40,7 @@ const VerifySignupPage = () => {
 
     const verifyEmailOTP = async () => {
 
-        const response = await fetch(`${BASE_URL}/api/auth/verify-email`, {
+        const response = await fetch(`${API_URL}/api/auth/verify-email`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const VerifySignupPage = () => {
 
     const verifyMobileOTP = async () => {
 
-        const response = await fetch(`${BASE_URL}/api/auth/verify-mobile`, {
+        const response = await fetch(`${API_URL}/api/auth/verify-mobile`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
