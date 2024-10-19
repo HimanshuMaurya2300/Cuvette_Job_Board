@@ -123,7 +123,7 @@ const HomePage = () => {
                 <div className="flex gap-98 sm:flex-col">
                     <div className="border-r border-blue_gray-100 px-5 h-screen py-[43px]">
                         <img
-                            src={`${BASE_URL}/public/homeIcon.svg`}
+                            src={`${BASE_URL}/homeIcon.svg`}
                             alt="home-icon"
                             className="h-[42px] w-[42px] object-cover sm:w-full"
                             onClick={() => navigate("/")}

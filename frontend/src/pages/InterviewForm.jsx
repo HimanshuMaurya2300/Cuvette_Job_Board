@@ -154,7 +154,7 @@ const InterviewForm = () => {
                 <div className="flex gap-98 sm:flex-col">
                     <div className="border-r border-blue_gray-100 px-5 h-screen py-[43px]">
                         <img
-                            src={`${BASE_URL}/public/homeIcon.svg`}
+                            src={`${BASE_URL}/homeIcon.svg`}
                             alt="home-icon"
                             className="h-[42px] w-[42px] object-cover sm:w-full"
                             onClick={() => navigate("/")}
@@ -217,7 +217,7 @@ const InterviewForm = () => {
                                         </p> */}
 
                                         <img
-                                            src={`${BASE_URL}/public/selectIcon.svg`}
+                                            src={`${BASE_URL}/selectIcon.svg`}
                                             alt='select_icon'
                                             className="mb-1 h-[26px] w-[26px] rounded"
                                         />
@@ -255,7 +255,7 @@ const InterviewForm = () => {
                                                         className="ml-2 text-gray-500 hover:text-gray-700 focus:outline-none"
                                                     >
                                                         <img
-                                                            src={`${BASE_URL}/public/closeIcon.svg`}
+                                                            src={`${BASE_URL}/closeIcon.svg`}
                                                             alt="close_icon"
                                                             className="ml-3 h-[10px] w-[10px]"
                                                         />
@@ -279,7 +279,7 @@ const InterviewForm = () => {
                                         className='flex w-[60%] gap-[34px] self-center rounded-[10px] border border-solid border-blue_gray-100_01 bg-transparent px-[30px] py-4 text-[24px] text-blue_gray-700_b2 md:w-full sm:px-4'
                                     />
                                     <img
-                                        src={`${BASE_URL}/public/calendarIcon.svg`}
+                                        src={`${BASE_URL}/calendarIcon.svg`}
                                         alt='calendar icon'
                                         className='w-5 h-5 cursor-pointer absolute right-5 top-[50%] translate-y-[-50%]'
                                     />
